@@ -7,9 +7,10 @@ const Statistics = () => {
 
     let totalDonation = 12 ;
     let yourDonation = (savedDonation || []).length ;
+    let remaining = totalDonation - yourDonation;
 
     const data = [
-        { name: "Total Donation", value: totalDonation },
+        { name: "Total Donation", value: remaining },
         { name: "Your Donation", value: yourDonation },
     ];
 
@@ -24,7 +25,7 @@ const Statistics = () => {
         outerRadius,
         percent
     }) => {
-        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+        const radius = innerRadius + (outerRadius - innerRadius) * 0.3;
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
@@ -38,7 +39,7 @@ const Statistics = () => {
                 textAnchor={x > cx ? "start" : "end"}
                 dominantBaseline="central"
             >
-                {`${(percent * 100).toFixed(0)}%`}
+                {`${(percent * 100).toFixed(1)}%`}
             </text>
         );
     };

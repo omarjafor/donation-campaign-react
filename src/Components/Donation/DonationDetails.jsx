@@ -29,7 +29,7 @@ const DonationDetails = ({ donation } ) => {
 
     return (
         <div>
-            <div className="mx-auto py-12">
+            <div className="mx-10 lg:mx-0 py-12">
                 <div className="relative mb-12 flex flex-col overflow-hidden rounded-xl shadow-md">
                     <img
                         alt="nature"

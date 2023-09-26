@@ -13,7 +13,7 @@ const Donation = () => {
     } , [])
 
     return (
-        <div className="">
+        <div className="mx-10 lg:mx-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" >
                 {
                     isShow ?
@@ -22,7 +22,7 @@ const Donation = () => {
                 }
             </div>
 
-            {donations.length > 3 && <button onClick={() => setIsShow(!isShow)} className={isShow ? 'hidden' : "py-4 px-7 text-white font-semibold rounded-lg mt-10 bg-green-500 mx-auto"}>
+            {donations.length > 4 && <button onClick={() => setIsShow(!isShow)} className={isShow ? 'hidden' : "py-4 px-7 text-white font-semibold rounded-lg mt-10 bg-green-500 mx-auto"}>
                 See All
             </button>}
         </div>

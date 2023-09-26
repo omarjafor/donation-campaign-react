@@ -6,7 +6,7 @@ const DonationCard = ({ donat }) => {
 
     return (
         <div>
-            <div className="relative flex max-w-[648px] rounded-xl shadow-md" style={{ backgroundColor: `${card_bg}` }}>
+            <div className="relative flex max-w-[648px] rounded-xl mx-auto shadow-md" style={{ backgroundColor: `${card_bg}` }}>
                 <div className="relative m-0 w-2/5 overflow-hidden rounded-xl rounded-r-none">
                     <img
                         src={picture}

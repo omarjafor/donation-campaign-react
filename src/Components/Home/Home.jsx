@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div>
             <Banner handleSearch={handleSearch}></Banner>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-24 mx-20'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-24 md:mx-10 lg:mx-24 mx-20'>
                 { filterData.length > 2 ? 
                     filterData.map(donation => <DonationCard key={donation.id} donation={donation} ></DonationCard>) :
                     donations?.map(donation => <DonationCard key={donation.id} donation={donation} ></DonationCard>)
