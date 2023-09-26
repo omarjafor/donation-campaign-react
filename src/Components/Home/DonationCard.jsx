@@ -13,7 +13,7 @@ const DonationCard = ({ donation }) => {
                     />
                     <div className="p-4 text-left">
                         <p className="px-2 py-1 rounded text-sm font-medium inline-block" style={{ backgroundColor: `${category_bg}`, color: `${txtbtn_bg}`}}>{category}</p>
-                        <h5 className="mt-2 block font-sans text-xl font-semibold leading-snug tracking-normal antialiased" style={{ color: `${txtbtn_bg}` }}>
+                        <h5 className="mt-2 block text-xl font-semibold leading-snug tracking-normal antialiased" style={{ color: `${txtbtn_bg}` }}>
                             {title} 
                         </h5>
                     </div>

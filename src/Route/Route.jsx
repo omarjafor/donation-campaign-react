@@ -13,22 +13,20 @@ const Route = createBrowserRouter([
         errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
-                path: '/',
-                element: <Home></Home>,
-                loader: () => fetch('../../public/data.json')
+                path: '',
+                element: <Home></Home>
             },
             {
-                path: '/donation',
+                path: 'donation',
                 element: <Donation></Donation>
             },
             {
-                path: '/statistics',
+                path: 'statistics',
                 element: <Statistics></Statistics>
             },
             {
-                path: '/donations/:id',
-                element: <FindDonation></FindDonation>,
-                loader: () => fetch('../../public/data.json')
+                path: 'donations/:id',
+                element: <FindDonation></FindDonation>
             }
         ]
     }

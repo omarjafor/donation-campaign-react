@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import DonationDetails from "./DonationDetails";
 
 const FindDonation = () => {
     const [donation, setDonation] = useState({});
     const { id } = useParams();
     const idInt = parseInt(id);
-    const donations = useLoaderData();
+
+    const [data, setData] = useState();
+
+    useEffect(() => {
+        fetch('../data.json')
+            .then(res => res.json())
+            .then(data => setData(data));
+    }, [])
 
     useEffect( () => {
-        const findDonat = donations?.find( (donat) => donat.id === idInt );
+        const findDonat = data?.find( (donat) => donat.id === idInt );
 
         setDonation(findDonat);
-    }, [idInt, donations])
+    }, [idInt, data])
 
     return (
         <div>
